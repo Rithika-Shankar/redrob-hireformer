@@ -30,7 +30,7 @@ HireFormer addresses this challenge by understanding both **job requirements** a
 # System Architecture
 
 <p align="center">
-  <img src="images/architecture.png" width="900"/>
+  <img src="images/architecture.png" width="500"/>
 </p>
 
 ---
@@ -38,7 +38,7 @@ HireFormer addresses this challenge by understanding both **job requirements** a
 # End-to-End Workflow
 
 <p align="center">
-  <img src="images/workflow.png" width="900"/>
+  <img src="images/workflow.png" width="300"/>
 </p>
 
 ---
