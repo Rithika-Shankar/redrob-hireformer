@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+
+outputs/
+data/candidates.jsonl
+data/demo_candidates.json
+
+README.docx
+sample_submission.csv
+test_loader.py
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

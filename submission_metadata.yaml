@@ -1,0 +1,75 @@
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "HireFormer"
+
+primary_contact:
+  name: "Rithika Shankar"
+  email: "rithikas4002@gmail.com"
+  phone: "+91-8310949532"
+
+team_members:
+  - name: "Rithika Shankar"
+    email: "rithikas4002@gmail.com"
+    role: "Team Lead"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/Rithika-Shankar/redrob-hireformer"
+
+sandbox_link: "https://YOUR_STREAMLIT_APP_URL"
+
+reproduce_command: "python rank.py --mode fast --shortlist-size 5000 --candidates data/candidates.jsonl --out submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Windows PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.12"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "ChatGPT"
+
+ai_usage_summary: |
+  ChatGPT was used for architectural discussions, debugging, code refinement,
+  UI improvements, documentation, and presentation preparation. All candidate
+  ranking logic, heuristics, implementation decisions, testing, and final
+  validation were reviewed and verified before submission. No external LLM or
+  API is used during candidate ranking or inference.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  HireFormer is a Transformer-inspired candidate ranking system that generates
+  a structured Hiring Blueprint from the Job Description and applies a two-stage
+  ranking pipeline. A fast retrieval layer efficiently shortlists the most
+  relevant candidates from the complete dataset, followed by Multi-View
+  Candidate Evaluation, Evidence Aggregation, and Trust Calibration to produce
+  explainable rankings. The system evaluates technical skills, experience,
+  recruiter signals, behavioral indicators, and profile quality beyond simple
+  keyword matching. The final output is an explainable Top-100 candidate
+  shortlist with transparent reasoning for every recommendation while meeting
+  the challenge's CPU-only and offline execution constraints.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: false
+  reproduction_tested: true
