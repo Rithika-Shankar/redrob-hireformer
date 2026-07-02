@@ -6,7 +6,7 @@ from typing import Any, Dict, List
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
-
+from pathlib import Path
 from src.fast_ranker import fast_rank_candidates_from_jsonl
 from src.loader import load_jsonl, load_docx_text, load_sample_json
 from src.jd_parser import build_hiring_blueprint
@@ -218,9 +218,13 @@ def top_nav():
 
 
 def load_uploaded_docx(uploaded):
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as tmp:
-        tmp.write(uploaded.getvalue())
-        return load_docx_text(tmp.name)
+    upload_dir = Path("tmp_uploads")
+    upload_dir.mkdir(exist_ok=True)
+
+    path = upload_dir / "uploaded_job_description.docx"
+    path.write_bytes(uploaded.getvalue())
+
+    return load_docx_text(str(path))
 
 
 def save_uploaded_file(uploaded, suffix):
