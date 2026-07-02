@@ -18,7 +18,7 @@ team_members:
 # ============================================================================
 github_repo: "https://github.com/Rithika-Shankar/redrob-hireformer"
 
-sandbox_link: "https://YOUR_STREAMLIT_APP_URL"
+sandbox_link: "https://hireformer.streamlit.app/"
 
 reproduce_command: "python rank.py --mode fast --shortlist-size 5000 --candidates data/candidates.jsonl --out submission.csv"
 
