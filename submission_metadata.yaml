@@ -43,11 +43,10 @@ ai_tools_used:
   - "ChatGPT"
 
 ai_usage_summary: |
-  ChatGPT was used for architectural discussions, debugging, code refinement,
-  UI improvements, documentation, and presentation preparation. All candidate
-  ranking logic, heuristics, implementation decisions, testing, and final
-  validation were reviewed and verified before submission. No external LLM or
-  API is used during candidate ranking or inference.
+  ChatGPT was used as a development assistant for debugging, documentation,
+  and code refinement. The project implementation, testing, and final validation
+  were completed and verified before submission. No external LLM or API is used
+  during candidate ranking or inference.
 
 # ============================================================================
 # Approach summary
