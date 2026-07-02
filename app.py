@@ -537,7 +537,10 @@ def export_page():
     st.markdown('<div class="page-title">Export & Download</div>', unsafe_allow_html=True)
     all_results = st.session_state.results
     if len(all_results) < 100:
-        st.info(f"Only {len(all_results)} candidates were ranked by the engine, so the export contains all {len(all_results)} instead of 100. Check the candidate-ranking step (src/ranker.py) if you expected more.")
+        st.info(
+            f"Demo Mode uses the official sample dataset with {len(all_results)} candidates. "
+            "For the full Top-100 submission, upload candidates.jsonl or run the CLI ranking command."
+        )
     rows = [{"candidate_id": r["candidate_id"], "rank": r["rank"], "score": r["score"], "reasoning": generate_reasoning(r["candidate"], r)} for r in all_results[:100]]
     df = pd.DataFrame(rows)
     st.dataframe(df, use_container_width=True, hide_index=True)
