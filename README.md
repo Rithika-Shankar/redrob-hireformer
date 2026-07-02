@@ -91,6 +91,9 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
+## Live Demo
+
+🌐 **Streamlit Demo:** https://hireformer.streamlit.app/
 
 The dashboard supports:
 
